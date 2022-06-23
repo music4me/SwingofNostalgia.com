@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+
+/* Responsive? What is that ? */
+
+:root {
+    --color-white: #FDFCFA;
+    --color-light-purple: #9D5573;
+    --color-dark-purple: #724767;
+    --color-dark-blue: #0c0e3b;
+    --color-orange: #f87676;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+*:before,
+*:after {
+    content: "";
+    position: absolute;
+}
+
+
+html {
+    
+    width: 100%;
+    height: 100vh;
+	transition: none;
+}
+
+
+.container:before {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.35;
+    z-index: 1000;
+}
+
+.container1 {
+    transform-origin: top center;
+    width: 200px;
+    top: -150px;
+    
+    position: relative;
+    left: 20%;
+    right: 0;
+	z-index: 3;
+  height: 50vh;
+  margin-left: 0px;
+  animation: swing ease-in-out 1.2s infinite alternate;
+   /*Swing animation*/
+  
+  
+  /* animation: bg-shift 100s ease-in-out infinite alternate-reverse, swing 100s ease-in-out infinite; */
+}
+
+.animationswing2{
+  animation: swing2 ease-in-out 2s infinite alternate ;
+}
+/* .container1:active{
+ 
+    animation: bg-shift 2s ease-in-out infinite alternate-reverse, swing 2s ease-in-out infinite;  
+    
+  
+}  */ 
+
+ /* .container1:before{
+    animation: bg-shift2 2s ease-in-out infinite alternate-reverse;
+}     */
+
+
+.swing {
+    width: 100%;         /*Swing's String length*/
+    height: 650px;    /*Swing's String length*/
+    left: 50px;
+
+    top: 0; 
+    transform-origin: top center;
+    border: 3px solid var(--color-white);
+  
+    border-bottom: none;
+    border-top: none;
+
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0.3deg);
+    }
+    100% {
+        transform: rotate(-0.2deg);
+    }
+}
+
+.swing-seat {
+    position: absolute;
+    width: 240px;
+    height: 16px;
+    background: linear-gradient(-4deg, var(--color-dark-purple), var(--color-dark-purple) 70%, var(--color-light-purple) 70%, var(--color-light-purple));
+    bottom: 0;
+    transform-origin: bottom;
+    display: flex;
+    justify-content: center;
+}
+
+.Randomlinkbutton{
+  width: 100%;
+  opacity:0;
+}
+
+/* Background image */
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+
+/* Swing */
+
+
+
+  @keyframes bg-shift {
+    from {
+      background-position: 0 50px;
+    }
+  }
+  
+  @keyframes bg-shift2 {
+    0% {
+      background-position: 0 50px;
+    }
+  
+    50% {
+  
+      background-position: 0 -50px;
+  
+    }
+  
+    100% {
+      background-position: 0 50px;
+    }
+  }
+  
+  @keyframes swing2 {
+    0% {
+      transform-origin: top;
+      transform: perspective(550px)rotatex(20deg);
+    }
+  
+    50% {
+      transform: perspective(550px)rotatex(-10deg);
+    }
+  
+    100% {
+      transform-origin: top;
+      transform: perspective(550px)rotatex(20deg);
+  
+    }
+  }  
+  
+
+    
